@@ -1,0 +1,39 @@
+
+
+.sideBar{
+    background-color: grey;   
+    height: 100vh;
+    width: 5%;
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    svg{
+        font-size: 1.75rem;
+        color: white;
+
+        
+    }
+}
+
+.sideBar__icons--top{
+    position: absolute;
+    top: 1rem;
+}
+
+.sideBar__icons--center{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 1.5rem ;
+}
+
+.sideBar__icons--bottom{
+    position: absolute;
+    bottom: 1rem;
+}
