@@ -36,7 +36,9 @@ const SignUpForm = () => {
         className="
         flex flex-col w-3/5 md:w-1/2 xl:w-1/3 justify-center items-center text-gray-200 bg-slate-800 rounded-lg "
       >
-        <h2 className="text-2xl mt-6 mb-2.5 font-medium">Create an Account</h2>
+        <h2 className="text-2xl mt-6 mb-2.5 font-medium">
+          Sign Up to begin the journey
+        </h2>
         <div className="w-3/4 h-0.5 mb-3.5 bg-gray-200 rounded-xl"></div>
         <div className="flex w-4/5 flex-col md:flex-row">
           <div className="flex flex-col w-full md:w-1/2 ">
@@ -45,7 +47,7 @@ const SignUpForm = () => {
               {...register("firstName")}
               placeholder="Enter your first name"
               type="string"
-              className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none"
+              className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none focus:bg-slate-500"
             />
             {errors.firstName && <p>{errors.firstName?.message}</p>}
           </div>
@@ -55,7 +57,7 @@ const SignUpForm = () => {
               {...register("lastName")}
               placeholder="Enter your last name"
               type="string"
-              className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none"
+              className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none focus:bg-slate-500"
             />
             {errors.lastName && <p>{errors.lastName?.message}</p>}
           </div>
@@ -66,7 +68,7 @@ const SignUpForm = () => {
             {...register("email")}
             placeholder="Enter your email"
             type="string"
-            className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none"
+            className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none focus:bg-slate-500"
           />
           {errors.email && <p>{errors.email?.message}</p>}
         </div>
@@ -76,7 +78,7 @@ const SignUpForm = () => {
             {...register("password")}
             placeholder="Enter your password"
             type="password"
-            className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none"
+            className="block px-4 py-3 rounded-lg bg-slate-600 focus:outline-none focus:bg-slate-500"
           />
           {errors.password && <p>{errors.password?.message}</p>}
         </div>
