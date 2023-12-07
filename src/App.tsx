@@ -1,38 +1,19 @@
-import "./App.scss";
-import { Home, Messages } from "./pages";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  Link,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { Home, SignInForm, SignUpForm, AuthLayout } from "./pages";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Root />}>
-        <Route index element={<Home />} />
-        <Route path="/messages" element={<Messages />} />
-      </Route>
-    )
-  );
   return (
     <>
-      <RouterProvider router={router} />
-    </>
-  );
-}
-
-function Root() {
-  return (
-    <>
-      <div>
-        <Link to="/"> Home </Link>
-        <Link to="/messages"> Messages </Link>
-      </div>
-      <Outlet />
+      <main className="flex h-screen w-screen ">
+        <Router>
+          <Routes>
+            <Route element={<AuthLayout />}>
+              <Route path="/sign-in" element={<SignInForm />} />
+              <Route path="/sign-up" element={<SignUpForm />} />
+            </Route>
+          </Routes>
+        </Router>
+      </main>
     </>
   );
 }
